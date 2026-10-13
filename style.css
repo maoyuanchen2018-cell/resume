@@ -1,0 +1,347 @@
+
+:root {
+    --paper: #f8f7f3;
+    --white: #ffffff;
+    --ink: #252923;
+    --muted: #70756c;
+    --accent: #526b55;
+    --line: #dedfd7;
+    --soft: #eeefe8;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+  }
+  
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+  }
+  
+  a {
+    color: inherit;
+  }
+  
+  .site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 22px 8%;
+    border-bottom: 1px solid var(--line);
+    background: var(--paper);
+  }
+  
+  .logo {
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-decoration: none;
+  }
+  
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  
+  nav a,
+  footer a {
+    font-size: 0.88rem;
+    text-decoration: none;
+  }
+  
+  nav a:hover,
+  footer a:hover {
+    color: var(--accent);
+  }
+  
+  .hero {
+    min-height: 570px;
+    padding: 120px 12% 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  
+  .eyebrow {
+    margin: 0 0 22px;
+    color: var(--accent);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+  }
+  
+  .hero h1 {
+    max-width: 850px;
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.8rem, 6.5vw, 5.4rem);
+    font-weight: 400;
+    letter-spacing: -0.045em;
+    line-height: 1.08;
+  }
+  
+  .hero-text {
+    max-width: 640px;
+    margin: 28px 0;
+    color: var(--muted);
+    font-size: 1.08rem;
+  }
+  
+  .button {
+    display: inline-flex;
+    align-items: center;
+    gap: 24px;
+    padding: 14px 22px;
+    background: var(--accent);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.92rem;
+    transition: background 0.2s ease;
+  }
+  
+  .button:hover {
+    background: var(--ink);
+  }
+  
+  .hero-note {
+    margin-top: 24px;
+    color: var(--muted);
+    font-size: 0.8rem;
+  }
+  
+  .section {
+    padding: 90px 12%;
+    border-top: 1px solid var(--line);
+  }
+  
+  .tinted {
+    background: var(--soft);
+  }
+  
+  .section h2 {
+    max-width: 800px;
+    margin: 0 0 32px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    font-weight: 400;
+    letter-spacing: -0.035em;
+    line-height: 1.2;
+  }
+  
+  .section-copy {
+    max-width: 720px;
+    color: var(--muted);
+  }
+  
+  .section-copy p {
+    margin-bottom: 20px;
+  }
+  
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 42px;
+  }
+  
+  .info-card {
+    padding: 30px;
+    border: 1px solid var(--line);
+    background: var(--paper);
+  }
+  
+  .card-number {
+    color: var(--accent);
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+  }
+  
+  .info-card h3,
+  .timeline-item h3,
+  .achievement-list h3 {
+    margin: 16px 0 10px;
+    font-size: 1.15rem;
+  }
+  
+  .info-card p,
+  .timeline-item li,
+  .achievement-list p {
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+  
+  .subheading {
+    margin: 44px 0 20px;
+    font-size: 1.1rem;
+  }
+  
+  .timeline {
+    border-left: 1px solid #c9cec3;
+    padding-left: 28px;
+  }
+  
+  .timeline-item {
+    position: relative;
+    padding: 0 0 34px;
+  }
+  
+  .timeline-item::before {
+    position: absolute;
+    top: 9px;
+    left: -34px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: var(--accent);
+    content: "";
+  }
+  
+  .timeline-item h3 {
+    margin: 6px 0;
+  }
+  
+  .date {
+    margin: 0;
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+  
+  .role {
+    margin: 6px 0 14px;
+    font-size: 0.92rem;
+    font-style: italic;
+  }
+  
+  .timeline-item ul {
+    padding-left: 20px;
+  }
+  
+  .timeline-item li {
+    margin-bottom: 8px;
+  }
+  
+  .achievement-list {
+    padding: 0;
+    list-style: none;
+  }
+  
+  .achievement-list li {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    gap: 18px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  
+  .achievement-list li > span {
+    color: var(--accent);
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+  
+  .achievement-list h3 {
+    margin: 0 0 6px;
+  }
+  
+  .achievement-list p {
+    margin: 0;
+  }
+  
+  .credential-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  
+  .credential-list p {
+    margin: 0;
+    padding: 12px 16px;
+    border: 1px solid var(--line);
+    font-size: 0.9rem;
+  }
+  
+  .contact-section {
+    background: #e9ece4;
+  }
+  
+  .contact-section > p:not(.eyebrow, .contact-detail) {
+    max-width: 600px;
+    color: var(--muted);
+  }
+  
+  .contact-section .button {
+    margin-top: 14px;
+  }
+  
+  .contact-detail {
+    margin-top: 24px;
+    font-size: 0.9rem;
+  }
+  
+  footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 24px 8%;
+    color: var(--muted);
+    font-size: 0.8rem;
+  }
+  
+  @media (max-width: 650px) {
+    .site-header {
+      align-items: flex-start;
+      flex-direction: column;
+      padding: 20px 6%;
+    }
+  
+    nav {
+      gap: 12px 18px;
+    }
+  
+    nav a {
+      font-size: 0.8rem;
+    }
+  
+    .hero {
+      min-height: auto;
+      padding: 85px 7%;
+    }
+  
+    .hero h1 {
+      font-size: clamp(2.5rem, 12vw, 4rem);
+    }
+  
+    .section {
+      padding: 65px 7%;
+    }
+  
+    .card-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .info-card {
+      padding: 24px;
+    }
+  
+    .achievement-list li {
+      grid-template-columns: 48px 1fr;
+      gap: 12px;
+    }
+  
+    footer {
+      padding: 22px 7%;
+    }
+  }
+  
